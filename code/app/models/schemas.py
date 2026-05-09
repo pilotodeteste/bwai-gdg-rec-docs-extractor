@@ -81,21 +81,3 @@ class BankReceiptData(BaseModel):
         if normalized == "comprovante_bancario":
             return normalized
         return "comprovante_bancario"
-
-
-class ProcessingResult(BaseModel):
-    filename: str = Field(..., description="Nome do arquivo PDF")
-    status: str = Field(..., description="Status do processamento (success/error/failed)")
-    data: Optional[FinancialDocumentData] = Field(None, description="Dados extraídos do documento")
-    error: Optional[str] = Field(None, description="Mensagem de erro se houver")
-
-
-class APIResponse(BaseModel):
-    message: str = Field(..., description="Mensagem de resposta")
-    version: str = Field("2.0.0", description="Versão da API")
-    endpoints: Optional[dict] = Field(None, description="Endpoints disponíveis")
-
-
-class HealthCheck(BaseModel):
-    status: str = Field(..., description="Status da API")
-    message: str = Field(..., description="Mensagem de status")
