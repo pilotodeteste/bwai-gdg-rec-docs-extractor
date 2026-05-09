@@ -20,10 +20,4 @@ class Settings:
     HOST: str = os.getenv("HOST", "0.0.0.0")
     PORT: int = int(os.getenv("PORT", "8000"))
 
-    API_COMMUNICATION_TOKEN: str = os.getenv("API_COMMUNICATION_TOKEN", "")
-    PUBLIC_API_URL: str = os.getenv("PUBLIC_API_URL", "http://localhost:3000")
-    CALLBACK_ENDPOINT: str = (
-        f"{os.getenv('PUBLIC_API_URL', 'http://localhost:3000')}/ai-integration/webhook/callback"
-    )
-
 settings = Settings()
