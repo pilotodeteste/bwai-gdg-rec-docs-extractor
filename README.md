@@ -54,8 +54,6 @@ VERTEX_MODEL_ID=gemini-3-flash-preview
 GOOGLE_APPLICATION_CREDENTIALS=/caminho/seguro/service-account.json
 HOST=0.0.0.0
 PORT=8000
-PUBLIC_API_URL=http://localhost:3000
-API_COMMUNICATION_TOKEN=
 ```
 
 ## Executar
