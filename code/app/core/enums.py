@@ -1,18 +1,10 @@
 from enum import Enum
 
 
-class ProcessingStatus(str, Enum):
-    SUCCESS = "success"
-    ERROR = "error"
-    FAILED = "failed"
-    PENDING = "pending"
-
-
 class ErrorCode(str, Enum):
     PROCESSING_ERROR = "PROCESSING_ERROR"
     PDF_READ_ERROR = "PDF_READ_ERROR"
     AI_API_ERROR = "AI_API_ERROR"
     JSON_EXTRACTION_ERROR = "JSON_EXTRACTION_ERROR"
     DATA_VALIDATION_ERROR = "DATA_VALIDATION_ERROR"
-    FILE_VALIDATION_ERROR = "FILE_VALIDATION_ERROR"
     UNKNOWN_ERROR = "UNKNOWN_ERROR"
